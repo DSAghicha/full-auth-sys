@@ -1,0 +1,16 @@
+{
+  "name": "auth-sys",
+  "version": "0.1.0",
+  "description": "Full Authentication System in MERN",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "DSAghicha",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^7.0.0",
+    "nodemon": "^2.0.15"
+  }
+}
