@@ -5,6 +5,12 @@ const cors = require('cors')
 const cookieParser = require('cookie-parser')
 const fileUpload = require('express-fileupload')
 
+require('cloudinary').config({
+    cloud_name: 'dsaghicha', 
+    api_key: process.env.CLOUDINARY_KEY, 
+    api_secret: process.env.CLOUDINARY_SECRET 
+})
+
 // Local Imports
 const db = require('./config/db')
 
