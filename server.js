@@ -5,6 +5,10 @@ const cors = require('cors')
 const cookieParser = require('cookie-parser')
 const fileUpload = require('express-fileupload')
 
+// Local Imports
+const db = require('./config/db')
+
+db()
 const app = express()
 
 app.use(express.json())
