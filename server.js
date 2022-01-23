@@ -18,13 +18,15 @@ const db = require('./config/db')
 db()
 const app = express()
 
-app.use(errorHandler)
 app.use(express.json())
-app.use(cors())
-app.use(cookieParser())
-app.use(fileUpload({
-    useTempFiles: true
-}))
+app.use('/auth', require('./routes/auth'))
+
+app.use(errorHandler)
+// app.use(cors())
+// app.use(cookieParser())
+// app.use(fileUpload({
+//     useTempFiles: true
+// }))
 
 const PORT = process.env.PORT || 5000
 
