@@ -4,6 +4,7 @@ const express = require('express')
 const cors = require('cors')
 const cookieParser = require('cookie-parser')
 const fileUpload = require('express-fileupload')
+const errorHandler = require('./middleware/error')
 
 require('cloudinary').config({
     cloud_name: 'dsaghicha', 
@@ -17,6 +18,7 @@ const db = require('./config/db')
 db()
 const app = express()
 
+app.use(errorHandler)
 app.use(express.json())
 app.use(cors())
 app.use(cookieParser())
